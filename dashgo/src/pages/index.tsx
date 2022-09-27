@@ -1,7 +1,8 @@
-import { Flex, Button, Stack } from '@chakra-ui/react'
+import { Flex, Button, Stack, useBreakpointValue } from '@chakra-ui/react';
 import { Input } from '../components/Form/inputs'
 
 export default function SignIn() {
+
   return (
     <Flex
       width='100vw'
