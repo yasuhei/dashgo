@@ -21,6 +21,7 @@ export function ActiveLink({children,shouldMatchExactHref = false,...rest}: Acti
         (asPath.startsWith(String(rest.href))||
         asPath.startsWith(String(rest.as)))) {
             isActive = true
+            
         }
     return(
         <Link {...rest}>
