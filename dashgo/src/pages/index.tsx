@@ -3,6 +3,7 @@ import { Input } from '../components/Form/inputs'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { error } from 'console';
 
 type InputPropsSubmit = {
   email: string;
@@ -16,7 +17,7 @@ const signInFormSchema = yup.object().shape({
 
 export default function SignIn() {
 
-  const {register,handleSubmit, formState } = useForm({
+  const { register, handleSubmit, formState } = useForm<InputPropsSubmit>({
     resolver: yupResolver(signInFormSchema)
   })
 
